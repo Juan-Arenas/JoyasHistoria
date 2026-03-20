@@ -22,8 +22,8 @@
     /* NAV */
     nav{position:fixed;top:0;width:100%;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:20px 60px;transition:all 0.5s;}
     nav.scrolled{background:rgba(6,13,9,0.97);backdrop-filter:blur(24px);border-bottom:1px solid rgba(201,168,76,0.13);padding:13px 60px;}
-    .nav-logo img{height:42px;transition:height 0.3s;}
-    nav.scrolled .nav-logo img{height:34px;}
+    .nav-logo img{height:80px;transition:height 0.3s;}
+    nav.scrolled .nav-logo img{height:62px;}
     .nav-links{display:flex;gap:32px;list-style:none;}
     .nav-links a{font-family:'Cinzel',serif;font-size:9.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--tl);text-decoration:none;position:relative;padding-bottom:4px;transition:color 0.3s;}
     .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.35s;}
@@ -36,8 +36,8 @@
 
     /* HERO */
     #hero{position:relative;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;}
-    #hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85;}
-    .hero-overlay{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(13,61,43,0.06) 0%,transparent 65%),linear-gradient(to bottom,rgba(6,13,9,0.22) 0%,rgba(6,13,9,0.02) 38%,rgba(13,61,43,0.06) 62%,rgba(6,13,9,0.94) 100%);}
+    #hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1;filter:brightness(0.82) saturate(1.15);}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(6,13,9,0.25) 0%,rgba(6,13,9,0.02) 38%,rgba(6,13,9,0.05) 62%,rgba(6,13,9,0.88) 100%);}
     .hero-lines{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
     .hero-lines::before,.hero-lines::after{content:'';position:absolute;width:1px;background:linear-gradient(to bottom,transparent,rgba(201,168,76,0.25),transparent);animation:lineFall 7s ease-in-out infinite;}
     .hero-lines::before{height:45%;top:8%;left:12%;animation-delay:0s;}
@@ -167,8 +167,9 @@
     .mvideo-num{font-family:'Cinzel Decorative',serif;font-size:22px;color:rgba(201,168,76,0.4);position:absolute;top:14px;left:18px;}
     .mvideo-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;border:1px solid rgba(201,168,76,0.6);display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.4);transition:all 0.3s;}
     .mvideo:hover .mvideo-play{background:rgba(201,168,76,0.2);border-color:var(--gold);}
+    .muestra-videos.cols3{grid-template-columns:repeat(3,1fr);}
     .muestra-videos.cols4{grid-template-columns:repeat(4,1fr);}
-    .muestra-videos.cols6{grid-template-columns:repeat(3,1fr);}
+    .muestra-videos.cols5{grid-template-columns:repeat(5,1fr);}
 
     /* VIDEO SPLIT */
     #video-sec{display:grid;grid-template-columns:1fr 1fr;height:65vh;overflow:hidden;}
@@ -208,13 +209,13 @@
     .cc:hover .cc-cta{opacity:1;transform:translateX(0);}
     .cc-cta-arrow{width:18px;height:1px;background:var(--gold);position:relative;}
     .cc-cta-arrow::after{content:'';position:absolute;right:0;top:-3px;width:6px;height:6px;border-right:1px solid var(--gold);border-top:1px solid var(--gold);transform:rotate(45deg);}
-    .cc-a{grid-column:1/8;grid-row:1;height:500px;}
-    .cc-b{grid-column:8/13;grid-row:1;height:500px;}
-    .cc-c{grid-column:1/5;grid-row:2;height:400px;}
-    .cc-d{grid-column:5/9;grid-row:2;height:400px;}
-    .cc-e{grid-column:9/13;grid-row:2;height:400px;}
-    .cc-f{grid-column:1/13;grid-row:3;height:340px;}
-    .cc-a .cc-name,.cc-f .cc-name{font-size:26px;}
+    .cc-a{grid-column:1/8;grid-row:1;height:340px;}
+    .cc-b{grid-column:8/13;grid-row:1;height:340px;}
+    .cc-c{grid-column:1/5;grid-row:2;height:260px;}
+    .cc-d{grid-column:5/9;grid-row:2;height:260px;}
+    .cc-e{grid-column:9/13;grid-row:2;height:260px;}
+    .cc-f{grid-column:1/13;grid-row:3;height:220px;}
+    .cc-a .cc-name,.cc-f .cc-name{font-size:22px;}
 
     /* TESTIMONIOS */
     #testimonios{padding:100px 60px;}
@@ -260,7 +261,7 @@
     /* FOOTER */
     footer{padding:60px 60px 36px;background:var(--dark);border-top:1px solid rgba(201,168,76,0.08);}
     .foot-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:54px;}
-    .flogo img{height:42px;margin-bottom:18px;}
+    .flogo img{height:90px;margin-bottom:18px;}
     .fdesc{font-size:14px;color:var(--tm);line-height:1.75;font-style:italic;}
     .fcol-title{font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
     .flinks{list-style:none;display:flex;flex-direction:column;gap:10px;}
@@ -290,25 +291,64 @@
     .lb-close{position:absolute;top:-40px;right:0;background:none;border:none;color:var(--gl);font-size:28px;cursor:pointer;font-family:'Cinzel',serif;line-height:1;}
     .lb-btn{display:inline-block;margin-top:16px;font-family:'Cinzel',serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:12px 28px;background:linear-gradient(135deg,var(--gold),var(--gl));color:var(--dark);cursor:pointer;border:none;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);}
 
-    /* REDES SOCIALES */
-    #redes{padding:110px 60px;background:linear-gradient(180deg,var(--dark) 0%,var(--dmid) 50%,var(--dark) 100%);position:relative;z-index:2;}
-    .redes-inner{max-width:1200px;margin:0 auto;}
-    .redes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:60px;}
-    .red-card{position:relative;border:1px solid rgba(201,168,76,0.15);background:rgba(13,61,43,0.06);padding:38px 28px 34px;text-align:center;text-decoration:none;color:inherit;display:block;transition:all 0.38s cubic-bezier(0.25,0.46,0.45,0.94);overflow:hidden;}
-    .red-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,168,76,0.07),transparent);opacity:0;transition:opacity 0.35s;pointer-events:none;}
-    .red-card:hover{border-color:rgba(201,168,76,0.5);transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,0.5),0 0 40px rgba(201,168,76,0.08);}
-    .red-card:hover::before{opacity:1;}
-    .red-icon{width:60px;height:60px;border-radius:50%;border:1px solid rgba(201,168,76,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;background:rgba(201,168,76,0.06);transition:all 0.35s;}
-    .red-card:hover .red-icon{border-color:var(--gold);background:rgba(201,168,76,0.13);}
-    .red-platform{font-family:'Cinzel',serif;font-size:9px;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
-    .red-handle{font-family:'Cinzel Decorative',serif;font-size:15px;color:var(--cream);line-height:1.25;margin-bottom:10px;}
-    .red-desc{font-size:13px;color:var(--tm);line-height:1.6;font-style:italic;margin-bottom:22px;}
-    .red-cta{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:10px;}
-    .red-arrow{width:22px;height:1px;background:var(--gold);position:relative;display:inline-block;flex-shrink:0;}
-    .red-arrow::after{content:'';position:absolute;right:0;top:-3px;width:6px;height:6px;border-right:1px solid var(--gold);border-top:1px solid var(--gold);transform:rotate(45deg);}
-    .red-corner{position:absolute;width:14px;height:14px;}
-    .red-corner.tl{top:10px;left:10px;border-top:1px solid rgba(201,168,76,0.28);border-left:1px solid rgba(201,168,76,0.28);}
-    .red-corner.br{bottom:10px;right:10px;border-bottom:1px solid rgba(201,168,76,0.28);border-right:1px solid rgba(201,168,76,0.28);}
+
+    /* ═══ REDES SOCIALES ═══ */
+    #redes{padding:100px 60px;background:linear-gradient(180deg,var(--dmid) 0%,var(--dark) 100%);position:relative;overflow:hidden;}
+    #redes::before{content:'';position:absolute;top:-300px;left:50%;transform:translateX(-50%);width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.04) 0%,transparent 65%);pointer-events:none;}
+    .redes-inner{max-width:1100px;margin:0 auto;}
+    .redes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+    .red-card{position:relative;border:1px solid rgba(201,168,76,0.12);padding:40px 28px 36px;text-align:center;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:14px;transition:border-color 0.35s,transform 0.35s;overflow:hidden;background:rgba(0,0,0,0.25);}
+    .red-card:hover{transform:translateY(-7px);}
+    .red-shine{position:absolute;top:0;left:-100%;width:55%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.04),transparent);transform:skewX(-15deg);transition:left 0.55s ease;pointer-events:none;}
+    .red-card:hover .red-shine{left:160%;}
+    .red-card::after{content:'';position:absolute;inset:0;opacity:0;transition:opacity 0.4s;pointer-events:none;}
+    .red-card:hover::after{opacity:1;}
+    .red-tiktok1:hover{border-color:#69c9d0;}
+    .red-tiktok1::after{background:linear-gradient(135deg,rgba(105,201,208,0.06),rgba(0,0,0,0));}
+    .red-tiktok2:hover{border-color:#ee1d52;}
+    .red-tiktok2::after{background:linear-gradient(135deg,rgba(238,29,82,0.06),rgba(0,0,0,0));}
+    .red-instagram:hover{border-color:#e1306c;}
+    .red-instagram::after{background:linear-gradient(135deg,rgba(225,48,108,0.06),rgba(0,0,0,0));}
+    .red-facebook:hover{border-color:#1877f2;}
+    .red-facebook::after{background:linear-gradient(135deg,rgba(24,119,242,0.06),rgba(0,0,0,0));}
+    .red-icon{width:68px;height:68px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1px solid rgba(201,168,76,0.2);background:rgba(201,168,76,0.04);transition:all 0.35s;position:relative;z-index:1;}
+    .red-card:hover .red-icon{transform:scale(1.1);}
+    .red-tiktok1:hover .red-icon{border-color:#69c9d0;background:rgba(105,201,208,0.1);}
+    .red-tiktok2:hover .red-icon{border-color:#ee1d52;background:rgba(238,29,82,0.1);}
+    .red-instagram:hover .red-icon{border-color:#e1306c;background:rgba(225,48,108,0.1);}
+    .red-facebook:hover .red-icon{border-color:#1877f2;background:rgba(24,119,242,0.1);}
+    .red-platform{font-family:'Cinzel',serif;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--tm);position:relative;z-index:1;}
+    .red-handle{font-family:'Cinzel Decorative',serif;font-size:15px;color:var(--cream);line-height:1.25;position:relative;z-index:1;transition:color 0.3s;}
+    .red-tiktok1:hover .red-handle{color:#69c9d0;}
+    .red-tiktok2:hover .red-handle{color:#ee1d52;}
+    .red-instagram:hover .red-handle{color:#e1306c;}
+    .red-facebook:hover .red-handle{color:#6b9fff;}
+    .red-desc{font-size:13px;color:var(--tm);font-style:italic;line-height:1.65;position:relative;z-index:1;}
+    .red-cta{display:inline-flex;align-items:center;gap:7px;margin-top:4px;font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);position:relative;z-index:1;transition:color 0.3s;}
+    .red-cta-line{display:inline-block;width:15px;height:1px;background:currentColor;position:relative;vertical-align:middle;}
+    .red-cta-line::after{content:'';position:absolute;right:0;top:-3px;width:5px;height:5px;border-right:1px solid currentColor;border-top:1px solid currentColor;transform:rotate(45deg);}
+    .red-tiktok1:hover .red-cta{color:#69c9d0;}
+    .red-tiktok2:hover .red-cta{color:#ee1d52;}
+    .red-instagram:hover .red-cta{color:#e1306c;}
+    .red-facebook:hover .red-cta{color:#6b9fff;}
+
+    /* ANILLO DESTACADO */
+    .anillo-destacado{cursor:pointer;position:relative;}
+    .anillo-destacado::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.2) 50%,transparent 100%);z-index:1;pointer-events:none;}
+    .anillo-destacado:hover img{transform:scale(1.06);filter:brightness(1.0);}
+    .anillo-destacado img{transition:transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94),filter 0.4s;}
+    .anillo-badge{position:absolute;top:16px;right:16px;z-index:3;font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);background:rgba(0,0,0,0.65);border:1px solid rgba(201,168,76,0.45);padding:6px 12px;backdrop-filter:blur(6px);}
+    .anillo-info{position:absolute;bottom:0;left:0;right:0;z-index:3;padding:28px 24px;}
+    .anillo-name{font-family:'Cinzel Decorative',serif;font-size:18px;color:var(--cream);line-height:1.25;margin-bottom:8px;}
+    .anillo-price{font-family:'Cinzel',serif;font-size:20px;color:var(--gl);letter-spacing:1px;margin-bottom:8px;font-weight:600;}
+    .anillo-sub{font-size:11px;color:var(--tl);font-style:italic;letter-spacing:0.5px;margin-bottom:14px;opacity:0;transform:translateY(8px);transition:opacity 0.3s,transform 0.3s;}
+    .anillo-destacado:hover .anillo-sub{opacity:1;transform:translateY(0);}
+    .anillo-cta{display:inline-block;font-family:'Cinzel',serif;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--dark);background:linear-gradient(135deg,var(--gold),var(--gl));padding:10px 20px;clip-path:polygon(7px 0%,100% 0%,calc(100% - 7px) 100%,0% 100%);opacity:0;transform:translateY(8px);transition:opacity 0.3s 0.05s,transform 0.3s 0.05s;}
+    .anillo-destacado:hover .anillo-cta{opacity:1;transform:translateY(0);}
+    /* Gold shimmer border */
+    .anillo-destacado::after{content:'';position:absolute;inset:0;border:2px solid rgba(201,168,76,0);z-index:4;pointer-events:none;opacity:0;transition:opacity 0.4s, border-color 0.4s;}
+    .anillo-destacado:hover::after{opacity:1;border-color:rgba(201,168,76,0.65);}
+    .anillo-destacado:hover::after{opacity:1;}
 
     /* RESPONSIVE */
     @media(max-width:1100px){
@@ -317,14 +357,13 @@
       .valores-list{grid-template-columns:repeat(2,1fr);}
       .rings-grid{grid-template-columns:repeat(3,1fr);}
       .cat-grid{grid-template-columns:1fr 1fr;}
-      .cc-a,.cc-b,.cc-c,.cc-d,.cc-e,.cc-f{grid-column:auto;grid-row:auto;height:370px;}
+      .cc-a,.cc-b,.cc-c,.cc-d,.cc-e,.cc-f{grid-column:auto;grid-row:auto;height:260px;}
       .test-grid{grid-template-columns:1fr;}
       .contact-wrap{grid-template-columns:1fr;gap:60px;}
       .foot-inner{grid-template-columns:1fr 1fr;}
       #video-sec{grid-template-columns:1fr;height:auto;}
       .trust-inner{grid-template-columns:repeat(2,1fr);}
       .muestra-videos{grid-template-columns:1fr 1fr!important;}
-      .redes-grid{grid-template-columns:repeat(2,1fr);}
     }
     @media(max-width:768px){
       nav{padding:14px 20px;}
@@ -341,16 +380,14 @@
       .muestras-tabs{margin:30px 20px 0;}
       .muestras-panel{padding:30px 20px 60px;}
       .muestra-videos{grid-template-columns:1fr!important;}
-      .redes-grid{grid-template-columns:1fr;}
-      #redes{padding:70px 20px;}
     }
   </style>
 </head>
 <body>
 
-<!-- AMBIENT AUDIO — música relajante de lujo -->
+<!-- AMBIENT AUDIO (lazy-loaded, user must enable) -->
 <audio id="ambientAudio" loop preload="none">
-  <source src="https://cdn.pixabay.com/audio/2024/02/28/audio_b5e5c08b18.mp3" type="audio/mp3">
+  <source src="https://cdn.pixabay.com/audio/2024/02/19/audio_dfc8d96e10.mp3" type="audio/mp3">
 </audio>
 
 <!-- WA FLOAT -->
@@ -400,10 +437,10 @@
     <div class="badge-virtual"><span class="badge-dot"></span> Tienda Virtual &nbsp;·&nbsp; Abierta 24 Horas</div>
     <p class="hero-eyebrow"><span>◆</span> Esmeraldas Naturales Certificadas <span>◆</span></p>
     <h1 class="hero-title">
-      <div class="outline"> </div>
-      <div class="gold"> </div>
+      <div class="outline"> </div>
+      <div class="gold"> </div>
     </h1>
-    <p class="hero-sub"> </p>
+    <p class="hero-sub"> </p>
     <div class="hdw"><div class="hdiv"></div><span class="hd">◆</span><div class="hdiv r"></div></div>
     <div class="hero-btns">
       <a href="#catalogo" class="btn-gold">Ver Anillos</a>
@@ -416,7 +453,7 @@
 <!-- MARQUEE -->
 <div class="mstrip">
   <div class="minner">
-    <span class="mi">Anillos desde $1.200.000 <span class="mdot">◆</span></span>
+    <span class="mi">Anillos desde $250.000 <span class="mdot">◆</span></span>
     <span class="mi">Esmeraldas Certificadas <span class="mdot">◆</span></span>
     <span class="mi">Plata Ley 925 <span class="mdot">◆</span></span>
     <span class="mi">Cadenas &amp; Dijes desde $280.000 <span class="mdot">◆</span></span>
@@ -424,7 +461,7 @@
     <span class="mi">Topos desde $200.000 <span class="mdot">◆</span></span>
     <span class="mi">Estuche de Lujo Incluido <span class="mdot">◆</span></span>
     <span class="mi">Certificado Gemológico <span class="mdot">◆</span></span>
-    <span class="mi">Anillos desde $1.200.000 <span class="mdot">◆</span></span>
+    <span class="mi">Anillos desde $250.000 <span class="mdot">◆</span></span>
     <span class="mi">Esmeraldas Certificadas <span class="mdot">◆</span></span>
     <span class="mi">Plata Ley 925 <span class="mdot">◆</span></span>
     <span class="mi">Cadenas &amp; Dijes desde $280.000 <span class="mdot">◆</span></span>
@@ -438,7 +475,7 @@
 <!-- NOSOTROS -->
 <section id="nosotros">
   <div class="about-img rv">
-    <img src="Imagen_1.png" alt="Anillo con Esmeralda Colombiana">
+    <img src="Imagen_1.webp" alt="Anillo con Esmeralda Colombiana">
     <span class="corner tl"></span><span class="corner tr"></span>
     <span class="corner bl"></span><span class="corner br"></span>
   </div>
@@ -469,9 +506,12 @@
       <h2 class="stitle">Joyas con Historia</h2>
       <div class="sline"></div>
     </div>
+
+    <!-- Historia intro -->
     <div class="historia-quote rv">
       <p>Brylica Joyería nace de una historia personal y familiar. La inspiración surgió cuando, en la búsqueda de unas argollas con esmeraldas para un matrimonio civil, encontramos un mercado de joyería poco accesible: precios elevados, atención distante y poca personalización. De esa experiencia nació el deseo de crear una joyería diferente, cercana y justa.<br><br>La plata, por su durabilidad y elegancia, junto con la esmeralda —gema que simboliza esperanza, naturaleza y vida— se convirtieron en los pilares de nuestra propuesta.</p>
     </div>
+
     <div class="historia-grid rv d1">
       <div class="hcard">
         <div class="hcard-icon">
@@ -488,6 +528,7 @@
         <div class="hcard-text">En Brylica Joyería brindamos la oportunidad de adquirir joyas de plata y gemas preciosas con diseños exclusivos, a precios justos y con una atención cercana. Nuestra misión es que cada persona pueda acceder a piezas que representen su historia, transmitiendo elegancia, esperanza y espiritualidad en cada detalle.</div>
       </div>
     </div>
+
     <div class="sheader rv" style="margin-top:60px;margin-bottom:30px;">
       <span class="slabel">◆ Nuestros Valores</span>
       <h3 class="stitle" style="font-size:clamp(20px,3vw,38px);">Valores Institucionales</h3>
@@ -536,8 +577,9 @@
     <span class="slabel">◆ Anillos con Esmeralda Natural</span>
     <h2 class="stitle">Colección de Anillos</h2>
     <div class="sline"></div>
-    <p style="margin-top:18px;font-size:16px;color:var(--tm);font-style:italic;">Todos a $1.200.000 · Esmeraldas naturales calidad superior · Incluye estuche de lujo y certificado gemológico</p>
+    <p style="margin-top:18px;font-size:16px;color:var(--tm);font-style:italic;">Todos a $250.000 · Esmeraldas naturales calidad superior · Incluye estuche de lujo y certificado gemológico</p>
   </div>
+
   <div class="rings-filter rv">
     <button class="rf-btn active" onclick="filterRings('all',this)">Todos</button>
     <button class="rf-btn" onclick="filterRings('5',this)">Talla 5</button>
@@ -546,7 +588,10 @@
     <button class="rf-btn" onclick="filterRings('7',this)">Talla 7</button>
     <button class="rf-btn" onclick="filterRings('8',this)">Talla 8</button>
   </div>
-  <div class="rings-grid" id="rings-grid"></div>
+
+  <div class="rings-grid" id="rings-grid">
+    <!-- Generated by JS -->
+  </div>
 </section>
 
 <!-- MUESTRAS (Videos) -->
@@ -561,62 +606,94 @@
       <button class="music-toggle" id="musicBtn" onclick="toggleMusic()">▶ Activar Música</button>
     </div>
   </div>
+
   <div class="muestras-tabs">
     <button class="mtab active" onclick="showPanel('anillos-exc',this)">Anillos Exclusivos</button>
     <button class="mtab" onclick="showPanel('cadenas',this)">Cadenas &amp; Dijes</button>
     <button class="mtab" onclick="showPanel('pulseras',this)">Pulseras</button>
     <button class="mtab" onclick="showPanel('topos',this)">Topos</button>
   </div>
+
+  <!-- Panel 1: Anillos exclusivos (Muestra1-3 + ANILLO.png) -->
   <div class="muestras-panel active" id="panel-anillos-exc">
     <div class="mpanel-desc rv">
       <div class="mprice">Desde $480.000</div>
       <div class="mtext">Anillo exclusivo que marca el inicio de una historia única, elaborado en plata ley 925 y engastado con esmeralda natural de alta calidad. Inspirado en la fuerza y belleza de la naturaleza, simboliza nuevos comienzos, elegancia y legado eterno.</div>
-      <div class="mbadge"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg> Incluye estuche de lujo y certificado gemológico</div>
+      <div class="mbadge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+        Incluye estuche de lujo y certificado gemológico
+      </div>
     </div>
-    <div class="muestra-videos" style="grid-template-columns:repeat(3,1fr);">
-      <div class="mvideo rv"><video autoplay muted loop playsinline><source src="Muestra1.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">01</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
-      <div class="mvideo rv d1"><video autoplay muted loop playsinline><source src="Muestra2.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">02</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
-      <div class="mvideo rv d2"><video autoplay muted loop playsinline><source src="Muestra3.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">03</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+    <div class="muestra-videos cols4">
+      <div class="mvideo rv"><video autoplay muted loop playsinline><source src="Muestra1.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">01</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+      <div class="mvideo rv d1"><video autoplay muted loop playsinline><source src="Muestra2.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">02</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+      <div class="mvideo rv d2"><video autoplay muted loop playsinline><source src="Muestra3.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">03</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+      <div class="mvideo anillo-destacado rv d3" onclick="cotizarAnillo()">
+        <img src="ANILLO.png" alt="Anillo Exclusivo Premium" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.88);">
+        <div class="mvideo-overlay"></div>
+        <div class="mvideo-num">✦</div>
+        <div class="anillo-badge">◆ Pieza Única</div>
+        <div class="anillo-info">
+          <div class="anillo-name">Anillo Exclusivo<br>Premium</div>
+          <div class="anillo-price">$1.200.000 COP</div>
+          <div class="anillo-sub">Esmeralda natural certificada · Plata 925 · Estuche de lujo</div>
+          <div class="anillo-cta">Cotizar Ahora →</div>
+        </div>
+      </div>
     </div>
   </div>
+
+  <!-- Panel 2: Cadenas (Muestra4-7) -->
   <div class="muestras-panel" id="panel-cadenas">
     <div class="mpanel-desc rv">
       <div class="mprice">Desde $280.000</div>
       <div class="mtext">Cadena de 45 cm con dije en esmeralda natural de calidad superior, finamente elaborado para resaltar su brillo y elegancia. Un complemento atemporal que transforma cualquier atuendo en una declaración de distinción.</div>
-      <div class="mbadge"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg> Incluye estuche de lujo y certificado gemológico</div>
+      <div class="mbadge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+        Incluye estuche de lujo y certificado gemológico
+      </div>
     </div>
     <div class="muestra-videos cols4">
-      <div class="mvideo rv"><video autoplay muted loop playsinline><source src="Muestra4.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">04</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
-      <div class="mvideo rv d1"><video autoplay muted loop playsinline><source src="Muestra5.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">05</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
-      <div class="mvideo rv d2"><video autoplay muted loop playsinline><source src="Muestra6.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">06</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
-      <div class="mvideo rv d3"><video autoplay muted loop playsinline><source src="Muestra7.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">07</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+      <div class="mvideo rv"><video autoplay muted loop playsinline><source src="Muestra4.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">04</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+      <div class="mvideo rv d1"><video autoplay muted loop playsinline><source src="Muestra5.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">05</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+      <div class="mvideo rv d2"><video autoplay muted loop playsinline><source src="Muestra6.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">06</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+      <div class="mvideo rv d3"><video autoplay muted loop playsinline><source src="Muestra7.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">07</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
     </div>
   </div>
+
+  <!-- Panel 3: Pulseras (Muestra8-10) -->
   <div class="muestras-panel" id="panel-pulseras">
     <div class="mpanel-desc rv">
       <div class="mprice">Desde $280.000</div>
       <div class="mtext">Pulseras en plata ley 925, engastadas con esmeraldas naturales de calidad superior, que reflejan elegancia, distinción y la esencia viva de la naturaleza. Una pieza que abraza tu muñeca con la energía de Colombia.</div>
-      <div class="mbadge"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg> Incluyen estuche de lujo y certificado gemológico</div>
+      <div class="mbadge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+        Incluyen estuche de lujo y certificado gemológico
+      </div>
     </div>
-    <div class="muestra-videos" style="grid-template-columns:repeat(3,1fr);">
-      <div class="mvideo rv"><video autoplay muted loop playsinline><source src="Muestra8.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">08</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
-      <div class="mvideo rv d1"><video autoplay muted loop playsinline><source src="Muestra9.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">09</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
-      <div class="mvideo rv d2"><video autoplay muted loop playsinline><source src="Muestra10.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">10</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+    <div class="muestra-videos cols3">
+      <div class="mvideo rv"><video autoplay muted loop playsinline><source src="Muestra8.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">08</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+      <div class="mvideo rv d1"><video autoplay muted loop playsinline><source src="Muestra9.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">09</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+      <div class="mvideo rv d2"><video autoplay muted loop playsinline><source src="Muestra10.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">10</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
     </div>
   </div>
+
+  <!-- Panel 4: Topos en Plata Ley 925 (Topo1-5) -->
   <div class="muestras-panel" id="panel-topos">
     <div class="mpanel-desc rv">
       <div class="mprice">Desde $200.000</div>
       <div class="mtext">Topos en plata ley 925 con esmeraldas naturales de alta calidad, elegantes y atemporales. La discreción hecha lujo: pequeñas piezas con una presencia que no pasa desapercibida.</div>
-      <div class="mbadge"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg> Incluyen estuche de lujo y certificado gemológico</div>
+      <div class="mbadge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+        Incluyen estuche de lujo y certificado gemológico
+      </div>
     </div>
-    <div class="muestra-videos cols6">
-      <div class="mvideo rv"><video autoplay muted loop playsinline><source src="Muestra15.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">11</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
-      <div class="mvideo rv d1"><video autoplay muted loop playsinline><source src="Muestra12.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">12</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
-      <div class="mvideo rv d2"><video autoplay muted loop playsinline><source src="Muestra13.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">13</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
-      <div class="mvideo rv"><video autoplay muted loop playsinline><source src="Muestra14.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">14</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
-      <div class="mvideo rv d1"><video autoplay muted loop playsinline><source src="Muestra15.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">15</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
-      <div class="mvideo rv d2"><video autoplay muted loop playsinline><source src="Muestra16.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">16</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+    <div class="muestra-videos cols5">
+      <div class="mvideo rv"><video autoplay muted loop playsinline><source src="Topo1.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">01</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+      <div class="mvideo rv d1"><video autoplay muted loop playsinline><source src="Topo2.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">02</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+      <div class="mvideo rv d2"><video autoplay muted loop playsinline><source src="Topo3.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">03</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+      <div class="mvideo rv d3"><video autoplay muted loop playsinline><source src="Topo4.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">04</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+      <div class="mvideo rv d3"><video autoplay muted loop playsinline><source src="Topo5.mp4" type="video/mp4"></video><div class="mvideo-overlay"></div><div class="mvideo-num">05</div><div class="mvideo-play"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
     </div>
   </div>
 </section>
@@ -645,7 +722,7 @@
   </div>
 </div>
 
-<!-- GALERÍA -->
+<!-- GALERÍA (otros productos) -->
 <section id="galeria">
   <div class="sheader rv">
     <span class="slabel">◆ Galería de Productos</span>
@@ -653,12 +730,72 @@
     <div class="sline"></div>
   </div>
   <div class="cat-grid">
-    <div class="cc cc-a rv"><img src="ANILLO.png" alt="Anillo con Esmeralda"><div class="cc-pat"></div><div class="cc-body"><span class="cc-tag">◆ Más Vendido</span><div class="cc-name">Anillos con Esmeralda Natural</div><div class="cc-price">Desde $1.200.000 COP</div><p class="cc-desc">Esmeraldas naturales certificadas, plata ley 925. Elegancia colombiana en cada detalle.</p><button class="cc-cta" onclick="cotizar('Anillos con Esmeralda Natural (desde $1.200.000)')">Cotizar<span class="cc-cta-arrow"></span></button></div></div>
-    <div class="cc cc-b rv d1"><img src="Aderezo.png" alt="Aderezos"><div class="cc-pat"></div><div class="cc-body"><span class="cc-tag">◆ Alta Joyería</span><div class="cc-name">Aderezos con Esmeralda</div><div class="cc-price">Desde $450.000 COP</div><p class="cc-desc">Conjuntos completos de anillo, aretes y collar. El regalo perfecto para ocasiones únicas.</p><button class="cc-cta" onclick="cotizar('Aderezos con Esmeraldas (desde $450.000)')">Cotizar<span class="cc-cta-arrow"></span></button></div></div>
-    <div class="cc cc-c rv"><img src="Imagen_4.jpeg" alt="Cadenas y Dijes"><div class="cc-pat"></div><div class="cc-body"><span class="cc-tag">◆ Plata 925</span><div class="cc-name">Cadenas &amp; Dijes</div><div class="cc-price">Desde $280.000 COP</div><p class="cc-desc">Cadenas en plata con dijes de esmeralda natural. Elegancia para cada día.</p><button class="cc-cta" onclick="cotizar('Cadenas y Dijes con Esmeralda (desde $280.000)')">Cotizar<span class="cc-cta-arrow"></span></button></div></div>
-    <div class="cc cc-d rv d1"><img src="Imagen_1.png" alt="Colección completa"><div class="cc-pat"></div><div class="cc-body"><span class="cc-tag">◆ Colección</span><div class="cc-name">Topos Plata 925</div><div class="cc-price">Desde $200.000 COP</div><p class="cc-desc">Topos en plata ley 925 con esmeraldas naturales. Discreción hecha lujo.</p><button class="cc-cta" onclick="cotizar('Topos en Plata 925 con Esmeraldas (desde $200.000)')">Cotizar<span class="cc-cta-arrow"></span></button></div></div>
-    <div class="cc cc-e rv d2"><img src="Imagen_2.png" alt="Pulseras en plata"><div class="cc-pat"></div><div class="cc-body"><span class="cc-tag">◆ Artesanal</span><div class="cc-name">Pulseras Tejidas</div><div class="cc-price">Desde $350.000 COP Sin Certificado</div><p class="cc-desc">Balinés diamantados en plata con esmeraldas naturales. Artesanía exclusiva.</p><button class="cc-cta" onclick="cotizar('Pulseras Tejidas en Plata con Esmeraldas (desde $280.000)')">Cotizar<span class="cc-cta-arrow"></span></button></div></div>
-    <div class="cc cc-f rv"><img src="Tejido.png" alt="Pulseras tejidas"><div class="cc-pat"></div><div class="cc-body"><span class="cc-tag">◆ Nueva Colección</span><div class="cc-name">Pulseras en Plata con Esmeraldas Naturales</div><div class="cc-price">Desde $280.000 COP</div><p class="cc-desc">Pulseras delicadas en plata con esmeraldas naturales que abrazan tu elegancia.</p><button class="cc-cta" onclick="cotizar('Pulseras en Plata con Esmeraldas (desde $280.000)')">Cotizar<span class="cc-cta-arrow"></span></button></div></div>
+    <div class="cc cc-a rv">
+      <img src="Imagen_3.jpeg" alt="Anillo con Esmeralda">
+      <div class="cc-pat"></div>
+      <div class="cc-body">
+        <span class="cc-tag">◆ Más Vendido</span>
+        <div class="cc-name">Anillos con Esmeralda Natural</div>
+        <div class="cc-price">Desde $250.000 COP</div>
+        <p class="cc-desc">Esmeraldas naturales certificadas, plata ley 925. Elegancia colombiana en cada detalle.</p>
+        <button class="cc-cta" onclick="cotizar('Anillos con Esmeralda Natural (desde $250.000)')">Cotizar<span class="cc-cta-arrow"></span></button>
+      </div>
+    </div>
+    <div class="cc cc-b rv d1">
+      <img src="Aderezo.png" alt="Aderezos">
+      <div class="cc-pat"></div>
+      <div class="cc-body">
+        <span class="cc-tag">◆ Alta Joyería</span>
+        <div class="cc-name">Aderezos con Esmeralda</div>
+        <div class="cc-price">Desde $450.000 COP</div>
+        <p class="cc-desc">Conjuntos completos de anillo, aretes y collar. El regalo perfecto para ocasiones únicas.</p>
+        <button class="cc-cta" onclick="cotizar('Aderezos con Esmeraldas (desde $450.000)')">Cotizar<span class="cc-cta-arrow"></span></button>
+      </div>
+    </div>
+    <div class="cc cc-c rv">
+      <img src="Imagen_4.jpeg" alt="Cadenas y Dijes">
+      <div class="cc-pat"></div>
+      <div class="cc-body">
+        <span class="cc-tag">◆ Plata 925</span>
+        <div class="cc-name">Cadenas &amp; Dijes</div>
+        <div class="cc-price">Desde $280.000 COP</div>
+        <p class="cc-desc">Cadenas en plata con dijes de esmeralda natural. Elegancia para cada día.</p>
+        <button class="cc-cta" onclick="cotizar('Cadenas y Dijes con Esmeralda (desde $280.000)')">Cotizar<span class="cc-cta-arrow"></span></button>
+      </div>
+    </div>
+    <div class="cc cc-d rv d1">
+      <img src="topo.png" alt="Colección completa">
+      <div class="cc-pat"></div>
+      <div class="cc-body">
+        <span class="cc-tag">◆ Colección</span>
+        <div class="cc-name">Topos Plata 925</div>
+        <div class="cc-price">Desde $200.000 COP</div>
+        <p class="cc-desc">Topos en plata ley 925 con esmeraldas naturales. Discreción hecha lujo.</p>
+        <button class="cc-cta" onclick="cotizar('Topos en Plata 925 con Esmeraldas (desde $200.000)')">Cotizar<span class="cc-cta-arrow"></span></button>
+      </div>
+    </div>
+    <div class="cc cc-e rv d2">
+      <img src="Imagen_2.png" alt="Pulseras tejidas">
+      <div class="cc-pat"></div>
+      <div class="cc-body">
+        <span class="cc-tag">◆ Artesanal</span>
+        <div class="cc-name">Pulseras Tejidas</div>
+        <div class="cc-price">Desde $350.000 COP</div>
+        <p class="cc-desc">Balinés diamantados en plata con esmeraldas naturales. Artesanía exclusiva.</p>
+        <button class="cc-cta" onclick="cotizar('Pulseras Tejidas en Plata con Esmeraldas (desde $280.000)')">Cotizar<span class="cc-cta-arrow"></span></button>
+      </div>
+    </div>
+    <div class="cc cc-f rv">
+      <img src="ENP.webp" alt="Pulseras en plata">
+      <div class="cc-pat"></div>
+      <div class="cc-body">
+        <span class="cc-tag">◆ Nueva Colección</span>
+        <div class="cc-name">Pulseras en Plata con Esmeraldas Naturales</div>
+        <div class="cc-price">Desde $250.000 COP</div>
+        <p class="cc-desc">Pulseras delicadas en plata con esmeraldas naturales que abrazan tu elegancia.</p>
+        <button class="cc-cta" onclick="cotizar('Pulseras en Plata con Esmeraldas (desde $280.000)')">Cotizar<span class="cc-cta-arrow"></span></button>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -670,9 +807,21 @@
     <div class="sline"></div>
   </div>
   <div class="test-grid">
-    <div class="tcard rv"><div class="stars">★★★★★</div><p class="ttext">El anillo es simplemente impresionante. La esmeralda tiene un color increíble y la plata de altísima calidad. Me atendieron al instante por WhatsApp y llegó en estuche de lujo. ¡100% recomendados!</p><div class="tauthor">María Fernanda R.</div><div class="tloc">Bogotá, Colombia</div></div>
-    <div class="tcard rv d1"><div class="stars">★★★★★</div><p class="ttext">Compré las pulseras tejidas para mi esposa y quedó encantada. La calidad es extraordinaria, el estuche precioso y el certificado gemológico le da una confianza total. ¡Volveré a comprar!</p><div class="tauthor">Carlos A. M.</div><div class="tloc">Medellín, Colombia</div></div>
-    <div class="tcard rv d2"><div class="stars">★★★★★</div><p class="ttext">La cadena con dije de esmeralda es una obra de arte. Atención personalísima, responden inmediato, y la joya superó todas mis expectativas. Una marca con alma y valores reales.</p><div class="tauthor">Isabel V.</div><div class="tloc">Pereira, Colombia</div></div>
+    <div class="tcard rv">
+      <div class="stars">★★★★★</div>
+      <p class="ttext">El anillo es simplemente impresionante. La esmeralda tiene un color increíble y la plata de altísima calidad. Me atendieron al instante por WhatsApp y llegó en estuche de lujo. ¡100% recomendados!</p>
+      <div class="tauthor">María Fernanda R.</div><div class="tloc">Bogotá, Colombia</div>
+    </div>
+    <div class="tcard rv d1">
+      <div class="stars">★★★★★</div>
+      <p class="ttext">Compré las pulseras tejidas para mi esposa y quedó encantada. La calidad es extraordinaria, el estuche precioso y el certificado gemológico le da una confianza total. ¡Volveré a comprar!</p>
+      <div class="tauthor">Carlos A. M.</div><div class="tloc">Medellín, Colombia</div>
+    </div>
+    <div class="tcard rv d2">
+      <div class="stars">★★★★★</div>
+      <p class="ttext">La cadena con dije de esmeralda es una obra de arte. Atención personalísima, responden inmediato, y la joya superó todas mis expectativas. Una marca con alma y valores reales.</p>
+      <div class="tauthor">Isabel V.</div><div class="tloc">Pereira, Colombia</div>
+    </div>
   </div>
 </section>
 
@@ -693,7 +842,7 @@
         </div>
         <div class="citem">
           <div class="cicon"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
-          <div><div class="citem-label">Correo</div><div class="citem-val">Brylicajoyeria@gmail.com</div></div>
+          <div><div class="citem-label">Correo</div><div class="citem-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f9bb8b8095909a989396809c8b9098b99e94989095d79a9694">[email&#160;protected]</a></div></div>
         </div>
         <div class="citem">
           <div class="cicon"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
@@ -710,11 +859,11 @@
       <div class="fg">
         <select id="f-tipo" onchange="this.style.color='var(--cream)'">
           <option value="" disabled selected>¿Qué joya te interesa?</option>
-          <option value="Anillos con Esmeralda Natural (desde $1.200.000)">Anillos — desde $1.200.000</option>
+          <option value="Anillos con Esmeralda Natural (desde $250.000)">Anillos — desde $250.000</option>
           <option value="Anillos Exclusivos Plata 925 (desde $480.000)">Anillos Exclusivos — desde $480.000</option>
           <option value="Aderezos con Esmeraldas (desde $450.000)">Aderezos — desde $450.000</option>
           <option value="Cadenas y Dijes con Esmeralda (desde $280.000)">Cadenas &amp; Dijes — desde $280.000</option>
-          <option value="Pulseras Tejidas (desde $280.000)">Pulseras — desde $280.000</option>
+          <option value="Pulseras en Plata con Esmeraldas (desde $280.000)">Pulseras — desde $280.000</option>
           <option value="Topos en Plata 925 con Esmeraldas (desde $200.000)">Topos — desde $200.000</option>
           <option value="Consulta General">Consulta General</option>
         </select>
@@ -725,62 +874,60 @@
   </div>
 </section>
 
+
 <!-- REDES SOCIALES -->
 <section id="redes">
   <div class="redes-inner">
     <div class="sheader rv">
-      <span class="slabel">◆ Síguenos · Conéctate · Inspírate</span>
-      <h2 class="stitle">Nuestras<br>Redes Sociales</h2>
+      <span class="slabel">◆ Síguenos en Redes</span>
+      <h2 class="stitle">Encuéntranos<br>en Redes Sociales</h2>
       <div class="sline"></div>
+      <p style="margin-top:18px;font-size:16px;color:var(--tm);font-style:italic;">Un solo clic y estás con nosotros · Contenido exclusivo, novedades y joyas únicas</p>
     </div>
     <div class="redes-grid">
 
-      <!-- TikTok carlosjoyas925 -->
-      <a class="red-card rv" href="https://www.tiktok.com/@carlosjoyas925" target="_blank" rel="noopener noreferrer">
-        <span class="red-corner tl"></span><span class="red-corner br"></span>
+      <a href="https://www.tiktok.com/@carlosjoyas925" target="_blank" rel="noopener" class="red-card red-tiktok1 rv">
+        <div class="red-shine"></div>
         <div class="red-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="var(--gold)"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.73a4.85 4.85 0 0 1-1.01-.04z"/></svg>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.98a8.2 8.2 0 0 0 4.79 1.52V7.07a4.85 4.85 0 0 1-1.02-.38z" fill="#69c9d0"/></svg>
         </div>
         <div class="red-platform">TikTok</div>
         <div class="red-handle">@carlosjoyas925</div>
-        <div class="red-desc">Joyas exclusivas, tendencias y el proceso artesanal de cada pieza única en plata 925.</div>
-        <span class="red-cta">Ver perfil <span class="red-arrow"></span></span>
+        <div class="red-desc">Videos de joyas, procesos artesanales y esmeraldas colombianas en su máximo esplendor</div>
+        <div class="red-cta">Ver Perfil <span class="red-cta-line"></span></div>
       </a>
 
-      <!-- TikTok brylicajoyeria -->
-      <a class="red-card rv d1" href="https://www.tiktok.com/@brylicajoyeria" target="_blank" rel="noopener noreferrer">
-        <span class="red-corner tl"></span><span class="red-corner br"></span>
+      <a href="https://www.tiktok.com/@brylicajoyeria" target="_blank" rel="noopener" class="red-card red-tiktok2 rv d1">
+        <div class="red-shine"></div>
         <div class="red-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="var(--gold)"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.73a4.85 4.85 0 0 1-1.01-.04z"/></svg>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.98a8.2 8.2 0 0 0 4.79 1.52V7.07a4.85 4.85 0 0 1-1.02-.38z" fill="#ee1d52"/></svg>
         </div>
         <div class="red-platform">TikTok</div>
         <div class="red-handle">@brylicajoyeria</div>
-        <div class="red-desc">Nuestra colección completa, inspiración y el arte detrás de cada esmeralda colombiana.</div>
-        <span class="red-cta">Ver perfil <span class="red-arrow"></span></span>
+        <div class="red-desc">Colecciones exclusivas, nuevos diseños y la historia detrás de cada joya de esmeralda</div>
+        <div class="red-cta">Ver Perfil <span class="red-cta-line"></span></div>
       </a>
 
-      <!-- Facebook -->
-      <a class="red-card rv d2" href="https://www.facebook.com/profile.php?id=61578580503985" target="_blank" rel="noopener noreferrer">
-        <span class="red-corner tl"></span><span class="red-corner br"></span>
+      <a href="https://www.instagram.com/brylicajoyeria" target="_blank" rel="noopener" class="red-card red-instagram rv d2">
+        <div class="red-shine"></div>
         <div class="red-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-        </div>
-        <div class="red-platform">Facebook</div>
-        <div class="red-handle">Brylica Joyería</div>
-        <div class="red-desc">Novedades, promociones exclusivas y la comunidad de quienes aman las joyas con historia.</div>
-        <span class="red-cta">Ver página <span class="red-arrow"></span></span>
-      </a>
-
-      <!-- Instagram -->
-      <a class="red-card rv d3" href="https://www.instagram.com/brylicajoyeria" target="_blank" rel="noopener noreferrer">
-        <span class="red-corner tl"></span><span class="red-corner br"></span>
-        <div class="red-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#e1306c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
         </div>
         <div class="red-platform">Instagram</div>
         <div class="red-handle">@brylicajoyeria</div>
-        <div class="red-desc">Galería de piezas únicas y el lujo de la esmeralda colombiana capturado en cada imagen.</div>
-        <span class="red-cta">Ver perfil <span class="red-arrow"></span></span>
+        <div class="red-desc">Fotografía de alta calidad, historias y el detrás de cámara de nuestras joyas de lujo</div>
+        <div class="red-cta">Ver Perfil <span class="red-cta-line"></span></div>
+      </a>
+
+      <a href="https://www.facebook.com/brylicajoyeria" target="_blank" rel="noopener" class="red-card red-facebook rv d3">
+        <div class="red-shine"></div>
+        <div class="red-icon">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1877f2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </div>
+        <div class="red-platform">Facebook</div>
+        <div class="red-handle">Brylica Joyería</div>
+        <div class="red-desc">Comunidad, promociones exclusivas y atención cercana en tu red favorita</div>
+        <div class="red-cta">Ver Perfil <span class="red-cta-line"></span></div>
       </a>
 
     </div>
@@ -818,7 +965,7 @@
       <div class="fcol-title">Contacto</div>
       <ul class="flinks">
         <li><a href="https://wa.me/573217798043" target="_blank">+57 321 779 8043</a></li>
-        <li><a href="mailto:Brylicajoyeria@gmail.com">Brylicajoyeria@gmail.com</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#4a0838332623292b2025332f38232b0a2d272b232664292527"><span class="__cf_email__" data-cfemail="aceeded5c0c5cfcdc6c3d5c9dec5cdeccbc1cdc5c082cfc3c1">[email&#160;protected]</span></a></li>
         <li><a href="https://wa.me/573217798043" target="_blank">WhatsApp</a></li>
         <li><a href="https://www.instagram.com/brylicajoyeria" target="_blank">Instagram</a></li>
         <li><a href="https://www.facebook.com/brylicajoyeria" target="_blank">Facebook</a></li>
@@ -835,7 +982,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── RINGS DATA ──
 const rings = [
   { id:1,  img:'1.jpeg',  talla:'5',   nombre:'Anillo Solitario Verde · Halo de Cristales',   precio:'$250.000', desc:'Esmeralda natural certificada engastada en plata ley 925 con halo de cristales. Elegancia pura en su forma más esencial.' },
@@ -908,7 +1055,6 @@ function cotizarLB(){
   document.getElementById('contacto').scrollIntoView({behavior:'smooth'});
 }
 
-// ── TABS MUESTRAS ──
 function showPanel(id, btn){
   document.querySelectorAll('.muestras-panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.mtab').forEach(b=>b.classList.remove('active'));
@@ -916,7 +1062,6 @@ function showPanel(id, btn){
   btn.classList.add('active');
 }
 
-// ── MUSIC ──
 let musicPlaying = false;
 function toggleMusic(){
   const audio = document.getElementById('ambientAudio');
@@ -934,7 +1079,14 @@ function toggleMusic(){
   }
 }
 
-// ── COTIZAR ──
+function cotizarAnillo(){
+  const sel = document.getElementById('f-tipo');
+  sel.value = 'Anillos Exclusivos Plata 925 (desde $480.000)';
+  sel.style.color='var(--cream)';
+  document.getElementById('f-mensaje').value = 'Me interesa el Anillo Exclusivo Premium ($1.200.000) — Esmeralda natural certificada, Plata 925, Estuche de lujo incluido.';
+  document.getElementById('contacto').scrollIntoView({behavior:'smooth'});
+}
+
 function cotizar(producto){
   const sel = document.getElementById('f-tipo');
   let found = false;
@@ -949,7 +1101,6 @@ function cotizar(producto){
   document.getElementById('contacto').scrollIntoView({behavior:'smooth'});
 }
 
-// ── WA FORM ──
 function enviarWA(){
   const nombre   = document.getElementById('f-nombre').value.trim();
   const telefono = document.getElementById('f-telefono').value.trim();
@@ -968,25 +1119,33 @@ function enviarWA(){
   window.open('https://wa.me/573217798043?text='+encodeURIComponent(txt),'_blank');
 }
 
-// ── NAV SCROLL ──
 window.addEventListener('scroll',()=>{
   document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>60);
 });
 
-// ── MOBILE MENU ──
 function toggleMenu(){
   const nl = document.querySelector('.nav-links');
-  if(nl.style.display==='flex'){ nl.style.display=''; }
-  else { nl.style.display='flex'; nl.style.flexDirection='column'; nl.style.position='absolute'; nl.style.top='60px'; nl.style.left='0'; nl.style.width='100%'; nl.style.background='rgba(6,13,9,0.98)'; nl.style.padding='20px 24px'; nl.style.gap='18px'; nl.style.borderBottom='1px solid rgba(201,168,76,0.15)'; }
+  if(nl.style.display==='flex'){
+    nl.style.display='';
+  } else {
+    nl.style.display='flex';
+    nl.style.flexDirection='column';
+    nl.style.position='absolute';
+    nl.style.top='60px';
+    nl.style.left='0';
+    nl.style.width='100%';
+    nl.style.background='rgba(6,13,9,0.98)';
+    nl.style.padding='20px 24px';
+    nl.style.gap='18px';
+    nl.style.borderBottom='1px solid rgba(201,168,76,0.15)';
+  }
 }
 
-// ── SCROLL REVEAL ──
 const observer = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('on'); observer.unobserve(e.target); } });
 },{threshold:0.1});
 document.querySelectorAll('.rv').forEach(el=>observer.observe(el));
 
-// ── INIT ──
 renderRings('all');
 </script>
 </body>
